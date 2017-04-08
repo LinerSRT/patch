@@ -148,6 +148,3 @@ allow shell media_rw_data_file:file create_file_perms;
 # bugs, so we want to ensure the shell user never has this
 # capability.
 neverallow shell file_type:file link;
-
-# Do not allow privileged socket ioctl commands
-#neverallowxperm shell domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
